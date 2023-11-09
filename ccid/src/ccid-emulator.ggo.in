@@ -8,41 +8,16 @@ option "reader"         r
     int
     default="-1"
     optional
-option "gadgetfs"       -
-    "Directory where GadgetFS is mounted"
+option "device"       -
+    "Device file where CCID USB device is available"
     string
     typestr="FILENAME"
-    default="/dev/gadget"
+    default="/dev/ccidg0"
     optional
 option "verbose"    v
     "Use (several times) to be more verbose"
     multiple
     optional
-
-section "Changing the appearance on the Universal Serial Bus"
-option "product"        p
-    "USB product ID"
-    int
-    default="0x3010"
-    optional
-option "vendor"         e
-    "USB vendor ID"
-    int
-    default="0x0D46"
-    optional
-option "serial"         -
-    "USB serial number"
-    string
-    default="random"
-    optional
-option "interface"      -
-    "USB serial number"
-    string
-    default="notification status"
-    optional
-option "interrupt"      -
-    "Add interrupt pipe for CCID"
-    flag off
 
 text "
 Report bugs to @PACKAGE_BUGREPORT@
