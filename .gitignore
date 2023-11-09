@@ -94,3 +94,4 @@ crash-info/
 
 *.apk
 keystore.properties
+.direnv/
